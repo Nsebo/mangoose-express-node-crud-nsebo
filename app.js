@@ -38,14 +38,6 @@ db.once('open', function () {
   console.log("We're connected to the database <3 <3 !");
 });
 
-app.get('/', (req, res) => {
-  res.send("hello! yay, it's working <3");
-});
-
-app.get('*', (req, res) => {
-  res.send("hello! yay, it's working <3");
-});
-
 // create a new device
 app.post('/createdevice', async (req, res) => {
   console.log(req.body);
@@ -94,4 +86,12 @@ app.delete('/device/:id', async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`> Ready on http://localhost:${PORT}`);
+});
+
+app.get('/', (req, res) => {
+  res.send("hello! yay, it's working <3");
+});
+
+app.get('*', (req, res) => {
+  res.send("hello! yay, it's working <3");
 });
