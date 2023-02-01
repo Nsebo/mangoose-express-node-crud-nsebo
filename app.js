@@ -90,6 +90,7 @@ app.listen(PORT, () => {
 
 app.get('/', (req, res) => {
   res.send("hello! yay, it's working <3");
+  console.log('hello ');
 });
 
 app.get('*', (req, res) => {
